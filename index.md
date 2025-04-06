@@ -1,5 +1,6 @@
 ---
 layout: default
+title: COMP7705 - Agent AI in Stock Market Trading
 ---
 
 ## Project Members
