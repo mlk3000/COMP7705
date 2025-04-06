@@ -1,6 +1,4 @@
-# HKU Stock Trading Agents
-
-**An HKU capstone team project implementing a multi-agent system for the complete lifecycle of stock data acquisition, analysis, and trading.**
+[TOC]
 
 ## Project Members
 
@@ -11,7 +9,7 @@
 
 ## Block 1
 
-
+---
 ## Framework Research
 
 ### Preliminary Testing
@@ -37,6 +35,6 @@
 * **Trading Agent Paper (Xiao et al., 2024)**: This paper's work focuses on improving information interaction methods and defining roles within MetaGPT. The authors claim the code will be open-source but it is not yet uploaded.
 
 
-
+---
 ## Block 3
 
