@@ -1,5 +1,3 @@
-[TOC]
-
 ## Project Members
 
 * Yang Runzhuo - 3036382856
