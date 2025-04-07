@@ -39,5 +39,18 @@ title: COMP7705 - Agent AI in Stock Market Trading
 
 
 ---
-## Block 3
+## Data Source Scheme
+### China Market
+**BigQuant**
+Price: ¥659/mo 
+Contains: high frequency data package (minute level)
 
+### Hong Kong Market
+**Futu**
+Price: 318 hkd/mo
+Contains: minute level of real time and history data
+
+### US Market
+**Futu**
+Price: 60 usd/mo
+Contains: minute level of real time and history data
