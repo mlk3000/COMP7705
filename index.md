@@ -10,7 +10,7 @@ title: COMP7705 - Agent AI in Stock Market Trading
 * Lin Xu - 3036380236
 * Liu Rui - 3036380494
 
-## First Report 4/7
+## First Update 4/7
 
 ---
 ### Framework Research
