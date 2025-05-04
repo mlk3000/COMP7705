@@ -10,12 +10,12 @@ title: COMP7705 - Agent AI in Stock Market Trading
 * Lin Xu - 3036380236
 * Liu Rui - 3036380494
 
-## Block 1
+## First Report 4/7
 
 ---
-## Framework Research
+### Framework Research
 
-### Preliminary Testing
+#### Preliminary Testing
 
 * **openManus & OWL**: Initial evaluation to understand basic functions.
 * **High Token Usage**: Observed ~10K-30K tokens per interaction - significant cost.
@@ -24,7 +24,7 @@ title: COMP7705 - Agent AI in Stock Market Trading
 * **Playwright etc.**: Used for web info retrieval - to see data gathering methods.
 * **Operation & Module Design**: Gaining initial insights for our design.
 
-### Framework Exploration
+#### Framework Exploration
 
 * **MetaGPT**:
     * **Software Company Simulation**: Model based on roles within a company.
@@ -39,18 +39,27 @@ title: COMP7705 - Agent AI in Stock Market Trading
 
 
 ---
-## Data Source Scheme
-### China Market
+### Data Source Scheme
+#### China Market
 **BigQuant**
 Price: ¥659/mo 
 Contains: high frequency data package (minute level)
 
-### Hong Kong Market
+#### Hong Kong Market
 **Futu**
 Price: 318 hkd/mo
 Contains: minute level of real time and history data
 
-### US Market
+#### US Market
 **Futu**
 Price: 60 usd/mo
 Contains: minute level of real time and history data
+
+
+## Second Update 5/4
+### Works done by Yang Runzhuo
+- Data Source Confirmation: Discussed with the teacher Tony Lam for Comp 7415 Quantitative Trading and learned that the Algoene platform provides minute-level data for all markets except A-shares. Furthermore, student accounts with a request limit of 60 per minute are available, which is sufficient for our project needs. This progress significantly reduces the effort required for data integration.
+- Existing Project Research: Investigated the GitHub project available at https://github.com/24mlight/A_Share_investment_Agent. This project represents a rudimentary implementation of the concepts presented in the "Trading Agent Paper" (Xiao et al., 2024).
+- Reimbursement Inquiry: Inquired about the complete reimbursement process. We are preparing to request reimbursement for approximately three items: the OpenAI Plus subscription, the Cursor subscription, and token credits for requests to large models via OpenRouter.
+- Coze Workflow Investigation: Investigated Coze's workflow-based AI orchestration capabilities. It appears that Coze's workflow approach represents a more mainstream method for implementing AI engineering projects currently, primarily because workflows offer high stability compared to the inherent uncertainty of agent actions.
+- Hybrid AI Design Research (arklex.ai): Investigated the design approach of arklex.ai, a product from the startup founded by Columbia AI Professor Zhou Yu. Their strategy involves a hybrid model combining workflows and agents: agents are employed to design the workflows. Specifically, agents are responsible for modifying existing workflows or creating new ones based on emerging requirements, rather than relying entirely on agent-based development for the core functionality.
