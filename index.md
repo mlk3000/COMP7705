@@ -80,4 +80,5 @@ The article presents a six-agent AI-driven trading framework that integrates spe
 - Followed a basic trading bot tutorial to get a general sense of how signal generation and agent execution flow are typically structured.
 - [Learned about a personally-built end-to-end trading platform](https://mpmt.notion.site/1e8cc64d809c80bb8d3de53ec6c9c8d6), with a focus on how the author integrated various published backtesting models into a functional and client-ready codebase.
 - Explored Coze’s access to Huatai-exclusive data to understand how to fetch structured research reports, analyze sectors, and incorporate this into agent-driven investment analysis, with workflows and analysis methods that can be adapted.
+![image](https://github.com/user-attachments/assets/32af371a-c942-4d66-9489-65d50b1d63d7)
 
