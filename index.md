@@ -73,3 +73,11 @@ The article presents a six-agent AI-driven trading framework that integrates spe
 ### Works done by LIU Rui
 - **Quantitative trading system development framework**: Learned about VeighNa, an open source Python-based framework for developing quantitative trading systems  <u>https://github.com/vnpy/vnpy</u>. Currently it provides a variety of modules, including a multi-functional quantitative trading platform (integrating a variety of trading interfaces and providing a simple and easy-to-use API for the development of specific strategy algorithms and functions), a CTP trading interface covering domestic futures and options trading in China, adapted to SQLite, and docked to the RQData (which is able to provide relevant data services for stocks, futures, options, funds, bonds, and gold TD). data service). Currently deployed on Windows and Ubantu systems (in progress).
 <img width="1120" alt="vnpy" src="https://github.com/user-attachments/assets/8d578090-4979-4f06-9bb5-1c7b5c9dd64f" />
+
+### Works done by LIN Xingyan
+
+- Looked into a financial LLM framework proposed by SUFE (arXiv:2503.16252v1), which finetunes on a financial reasoning dataset and applies reinforcement learning to improve interpretability and decision-making. Although it proposes a training-based approach, some voices argue that effective agent design relies more on leveraging contextual information rather than fine-tuning.
+- Followed a basic trading bot tutorial to get a general sense of how signal generation and agent execution flow are typically structured.
+- [Learned about a personally-built end-to-end trading platform](https://mpmt.notion.site/1e8cc64d809c80bb8d3de53ec6c9c8d6), with a focus on how the author integrated various published backtesting models into a functional and client-ready codebase.
+- Explored Coze’s access to Huatai-exclusive data to understand how to fetch structured research reports, analyze sectors, and incorporate this into agent-driven investment analysis, with workflows and analysis methods that can be adapted.
+
