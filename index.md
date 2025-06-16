@@ -29,7 +29,10 @@ title: COMP7705 - Agent AI in Stock Market Trading
 - Future Initiatives
    - Integrate AlgoGene data to build out our analysis capabilities for US stocks and Cryptos. (Closer)
    - Support more frequent trading by using finer-interval data, moving beyond our current daily focus. (Further)
-     
+
+### Works done by LIU Rui
+- A chatbot has been designated as the primary user interface, with React determined as the development technology. The preliminary design of the required ports for the interface and the page design style has been essentially determined.
+
 ---
 
 ## Second Update 5/4
