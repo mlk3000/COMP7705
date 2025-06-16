@@ -24,6 +24,7 @@ title: COMP7705 - Agent AI in Stock Market Trading
 - Future Initiatives
    - Integrate AlgoGene data to build out our analysis capabilities for US stocks and Cryptos. (Closer)
    - Support more frequent trading by using finer-interval data, moving beyond our current daily focus. (Further)
+     
 ---
 
 ## Second Update 5/4
