@@ -12,6 +12,11 @@ title: COMP7705 - Agent AI in Stock Market Trading
 
 ## Third Update 6/16 (After the Interium Report)
 
+### Works done by Yang Runzhuo
+- Secured 5,000 HKD in credits from Algoene, which provides us with access to their data API and a testing account.
+- Explored a hybrid framework integrating LangGraph and AutoGen to leverage the respective strengths of dynamic, tool-using multi-agent collaboration and structured, graph-based workflows.
+- Organized a mid-term development meeting to define and assign development tasks for each team member.
+
 ### Works done by LIN Xu
 - Add Algogene as a data source, capable of fetching minute-level historical market quotes and real time data
 
