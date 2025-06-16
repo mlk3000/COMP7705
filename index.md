@@ -82,3 +82,7 @@ The article presents a six-agent AI-driven trading framework that integrates spe
 - Explored Coze’s access to Huatai-exclusive data to understand how to fetch structured research reports, analyze sectors, and incorporate this into agent-driven investment analysis, with workflows and analysis methods that can be adapted.
 ![image](https://github.com/user-attachments/assets/32af371a-c942-4d66-9489-65d50b1d63d7)
 
+## Third Update 6/16 (After the Interium Report)
+
+### Works by LIN Xu
+- Add Algogene as a data source, capable of fetching minute-level historical market quotes and real time data
