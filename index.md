@@ -38,8 +38,6 @@ Investigated other trading agent practices to evaluate their effectiveness and g
 
 - Enhanced Macro News Agent: Extended the agent's capabilities through the integration and refinement of Algogene's macro news API.
 
----
-
 ### Works done by LIU Rui
 
 - Conducted a structured evaluation of multiple AI development platforms to support the frontend and dialogue interface. Evaluated V0.dev, Replit, Bolt (Zapier), Streamlit, and Gradio against four key criteria:
@@ -57,7 +55,7 @@ Investigated other trading agent practices to evaluate their effectiveness and g
 - The comparison is summarized below:
 ![pic](https://github.com/user-attachments/assets/d575b08a-2f6e-47eb-a9ac-4c0e0b194c9c)
 
-
+---
 
 ## Third Update 6/16 (After the Interium Report)
 
