@@ -10,7 +10,7 @@ title: COMP7705 - Agent AI in Stock Market Trading
 * Lin Xu - 3036380236
 * Liu Rui - 3036380494
 
-## Forth Update 7/7
+## Fourth Update 7/7
 
 ### Works done by Yang Runzhuo
 - Exploration of Advanced AI Development Tools:
@@ -30,6 +30,14 @@ Learnt common strategies and considered how agents can recommend suitable ones a
 - Analyzed existing Trading Agent implementations:
 Investigated other trading agent practices to evaluate their effectiveness and gather ideas for our own system.
 
+### Works done by Lin Xingyan
+
+- Integrated Algogene US Stock Data: Incorporated and refined the use of Algogene's core OHLCV data for US equities.
+
+- Optimized Data Sourcing: Strategically allocated data acquisition, leveraging Algogene for its intraday granularities while complementing with yFinance for broader financial data.
+
+- Enhanced Macro News Agent: Extended the agent's capabilities through the integration and refinement of Algogene's macro news API.
+---
 ## Third Update 6/16 (After the Interium Report)
 
 ### Works done by Yang Runzhuo
