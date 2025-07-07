@@ -37,7 +37,9 @@ Investigated other trading agent practices to evaluate their effectiveness and g
 - Optimized Data Sourcing: Strategically allocated data acquisition, leveraging Algogene for its intraday granularities while complementing with yFinance for broader financial data.
 
 - Enhanced Macro News Agent: Extended the agent's capabilities through the integration and refinement of Algogene's macro news API.
+
 ---
+
 ## Third Update 6/16 (After the Interium Report)
 
 ### Works done by Yang Runzhuo
