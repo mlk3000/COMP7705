@@ -22,6 +22,14 @@ title: COMP7705 - Agent AI in Stock Market Trading
     ReAct Framework: Developed an understanding of how to build agents that synergize reasoning and action to robustly handle tasks.
     Plan-and-Execute Model: Learned to construct agents that first formulate a multi-step plan and then execute it, enhancing the reliability of complex workflows.
 
+### Works done by Lin Xu
+- Studied RAG and explored new feature directions:
+Focused on applying Retrieval-Augmented Generation to build a financial knowledge base, aiming to improve accuracy in domain-specific responses of agents.
+- Explored quantitative trading strategies:
+Learnt common strategies and considered how agents can recommend suitable ones and perform backtesting.
+- Analyzed existing Trading Agent implementations:
+Investigated other trading agent practices to evaluate their effectiveness and gather ideas for our own system.
+
 ## Third Update 6/16 (After the Interium Report)
 
 ### Works done by Yang Runzhuo
