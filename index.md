@@ -10,6 +10,18 @@ title: COMP7705 - Agent AI in Stock Market Trading
 * Lin Xu - 3036380236
 * Liu Rui - 3036380494
 
+## Forth Update 7/7
+
+### Works done by Yang Runzhuo
+- Exploration of Advanced AI Development Tools:
+
+Gained proficiency in using Claude Code for efficient code generation and development assistance.
+
+- Mastered the implementation of sophisticated agent models using LangChain, focusing on two key architectures:
+
+ReAct Framework: Developed an understanding of how to build agents that synergize reasoning and action to robustly handle tasks.
+Plan-and-Execute Model: Learned to construct agents that first formulate a multi-step plan and then execute it, enhancing the reliability of complex workflows.
+
 ## Third Update 6/16 (After the Interium Report)
 
 ### Works done by Yang Runzhuo
