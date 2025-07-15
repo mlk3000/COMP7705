@@ -9,9 +9,7 @@ title: COMP7705 - Agent AI in Stock Market Trading
 
 > An AI-powered trading analysis system based on a multi-agent architecture. This course project showcases a complete, end-to-end solution for automated financial market analysis, supporting Chinese stocks, US stocks, and major cryptocurrencies.
 
-<a href="https://wp2024.cs.hku.hk/msp24113" class="btn" >Homepage</a>
-
-<a href="/progress/" class="btn" >Progress</a>
+<a href="https://wp2024.cs.hku.hk/msp24113" class="btn" >Homepage</a> <a href="/progress/" class="btn" >Progress</a>
 
 ---
 ## Team Overview
