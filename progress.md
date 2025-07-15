@@ -1,3 +1,14 @@
+---
+layout: default
+title: Progress
+permalink: /progress/
+---
+
+{% for post in site.tags.progress %}
+  <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <p>{{ post.excerpt }}</p>
+{% endfor %}
+
 ## Fourth Update 7/7
 
 ### Works done by Yang Runzhuo
