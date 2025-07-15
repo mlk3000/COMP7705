@@ -3,154 +3,145 @@ layout: default
 title: COMP7705 - Agent AI in Stock Market Trading
 ---
 
-## Project Members
 
-* Yang Runzhuo - 3036382856
-* Lin Xingyan - 3036383020
-* Lin Xu - 3036380236
-* Liu Rui - 3036380494
 
-## Fourth Update 7/7
+# Agentic AI in Quantitative Trading (Traditional – Cryptocurrency)
 
-### Works done by Yang Runzhuo
-- Exploration of Advanced AI Development Tools:
+> An AI-powered trading analysis system based on a multi-agent architecture. This course project showcases a complete, end-to-end solution for automated financial market analysis, supporting Chinese stocks, US stocks, and major cryptocurrencies.
 
-    Gained proficiency in using Claude Code for efficient code generation and development assistance.
+---
+## Team Overview
+**Group**: msp24113
 
-- Mastered the implementation of sophisticated agent models using LangChain, focusing on two key architectures:
-
-    ReAct Framework: Developed an understanding of how to build agents that synergize reasoning and action to robustly handle tasks.
-    Plan-and-Execute Model: Learned to construct agents that first formulate a multi-step plan and then execute it, enhancing the reliability of complex workflows.
-
-### Works done by Lin Xu
-- Studied RAG and explored new feature directions:
-Focused on applying Retrieval-Augmented Generation to build a financial knowledge base, aiming to improve accuracy in domain-specific responses of agents.
-- Explored quantitative trading strategies:
-Learnt common strategies and considered how agents can recommend suitable ones and perform backtesting.
-- Analyzed existing Trading Agent implementations:
-Investigated other trading agent practices to evaluate their effectiveness and gather ideas for our own system.
-
-### Works done by Lin Xingyan
-
-- Integrated Algogene US Stock Data: Incorporated and refined the use of Algogene's core OHLCV data for US equities.
-
-- Optimized Data Sourcing: Strategically allocated data acquisition, leveraging Algogene for its intraday granularities while complementing with yFinance for broader financial data.
-
-- Enhanced Macro News Agent: Extended the agent's capabilities through the integration and refinement of Algogene's macro news API.
-
-### Works done by LIU Rui
-
-- Conducted a structured evaluation of multiple AI development platforms to support the frontend and dialogue interface. Evaluated V0.dev, Replit, Bolt (Zapier), Streamlit, and Gradio against four key criteria:
-   - Chatbot & multi-turn dialogue support  
-   - Integration with LangGraph and agent workflows  
-   - UI flexibility and interaction components  
-   - Feedback iteration and dynamic re-run capabilities
-
-- V0.dev was selected as the primary development platform for the next stage, due to:
-   - Native support for chat UI with state tracking  
-   - Drag-and-drop components for building chatbot, forms, and report sections  
-   - Easy backend API connection for LangGraph agent calls  
-   - Fast deployment and real-time interaction update support
-
-- The comparison is summarized below:
-![pic](https://github.com/user-attachments/assets/d575b08a-2f6e-47eb-a9ac-4c0e0b194c9c)
+**Supervisor**: Dr. J.R. Zhang
+**Members**:
+- Yang Runzhuo – 3036382856
+- Lin Xingyan – 3036383020
+- Lin Xu – 3036380236
+- Liu Rui – 3036380494
 
 ---
 
-## Third Update 6/16 (After the Interium Report)
 
-### Works done by Yang Runzhuo
-- Secured 5,000 HKD in credits from Algoene, which provides us with access to their data API and a testing account.
-- Explored a hybrid framework integrating LangGraph and AutoGen to leverage the respective strengths of dynamic, tool-using multi-agent collaboration and structured, graph-based workflows.
-- Organized a mid-term development meeting to define and assign development tasks for each team member.
+## Table of Contents
 
-### Works done by LIN Xu
-- Add Algogene as a data source, capable of fetching minute-level historical market quotes and real time data
-
-### Works done by LIN Xingyan
-- Enhanced Macro News Agent: Conducted comprehensive testing and iterative modifications to the macro news agent's logic.
-- Stabilized Daily Backtester: Addressed and resolved issues within the daily backtester, ensuring its reliable and accurate execution.
-- Streamlined Langgraph Data Handling: Reworked data structures for message passing within Langgraph, preventing duplicate data appending by agents.
-![Figure_2](https://github.com/user-attachments/assets/a0c4cd67-9f44-4bad-bba2-d455d157e395)
-
-- Future Initiatives
-   - Integrate AlgoGene data to build out our analysis capabilities for US stocks and Cryptos. (Closer)
-   - Support more frequent trading by using finer-interval data, moving beyond our current daily focus. (Further)
-
-### Works done by LIU Rui
-- A chatbot has been designated as the primary user interface, with React determined as the development technology. The preliminary design of the required ports for the interface and the page design style has been essentially determined.
+1.  [Project Overview & Background](#-project-overview--background)
+2.  [System Architecture](#-system-architecture)
+3.  [Multi-Agent Details](#-multi-agent-details)
+4.  [Tech Stack](#-tech-stack)
+5.  [Core Implementation Details](#-core-implementation-details)
+6.  [Usage & Demo](#-usage--demo)
+7.  [Summary & Outlook](#-summary--outlook)
 
 ---
 
-## Second Update 5/4
-### Works done by Yang Runzhuo
-- **Data Source Confirmation**: Discussed with the teacher Tony Lam for Comp 7415 Quantitative Trading and learned that the Algoene platform provides minute-level data for all markets except A-shares. Furthermore, student accounts with a request limit of 60 per minute are available, which is sufficient for our project needs. This progress significantly reduces the effort required for data integration.
-- **Existing Project Research**: Investigated the GitHub project available at https://github.com/24mlight/A_Share_investment_Agent. This project represents a rudimentary implementation of the concepts presented in the "Trading Agent Paper" (Xiao et al., 2024).
-- **Reimbursement Inquiry**: Inquired about the complete reimbursement process. We are preparing to request reimbursement for approximately three items: the OpenAI Plus subscription, the Cursor subscription, and token credits for requests to large models via OpenRouter.
-- **Coze Workflow Investigation**: Investigated Coze's workflow-based AI orchestration capabilities. It appears that Coze's workflow approach represents a more mainstream method for implementing AI engineering projects currently, primarily because workflows offer high stability compared to the inherent uncertainty of agent actions.
-- **Hybrid AI Design Research (arklex.ai)**: Investigated the design approach of arklex.ai, a product from the startup founded by Columbia AI Professor Zhou Yu. Their strategy involves a hybrid model combining workflows and agents: agents are employed to design the workflows. Specifically, agents are responsible for modifying existing workflows or creating new ones based on emerging requirements, rather than relying entirely on agent-based for the core functionality.
+## Project Overview & Background
 
-### Works done by LIN Xu
-- **Similar Project Learning**: <u>/https://medium.com/@bijit211987/ai-powered-multi-agent-trading-workflow-90722a2ada3b</u>
-The article presents a six-agent AI-driven trading framework that integrates specialized agents—Market Data, Technical Analyst, Fundamentals, Sentiment, Risk Manager, and Portfolio Manager—working in a coordinated workflow where technical, fundamental, and sentiment analysis agents operate in parallel to process diverse market data, feeding into sequential risk assessment and portfolio decision-making. Leveraging OpenAI Swarm for dynamic task orchestration and LangChain for contextual data processing, the framework achieves low-latency operations (workflows completed in <3 seconds), scalable adaptability to multiple asset classes (stocks, crypto, forex), and enhanced risk management through real-time VaR/CVaR calculations. Key benefits include 20–25% compute cost savings, 10–15% annual margin improvements, and 75% reduced human intervention, positioning it as a scalable, resilient solution that transforms trading systems by harmonizing data chaos into actionable, efficient, and future-ready strategies.
-- **Trial on Existing Similar Platforms**: say, BigQuant, which has a Quant Agent with a complete workflow, and the result seems to fit our goal quite well. I, as a user without much quant knowledges, tried to use it to write a strategy and I even didn't select the target stocks, it can write a strategy and provide code on the sidebar, you can click run and the console also shows on sidebar. Once an error occurs, there's an AI assistant helping you debug. The running result is shown below the codespace. 
-<img width="1440" alt="image" src="https://github.com/user-attachments/assets/7a749b56-4b4d-4ca4-a0e7-829beda9201a" />
+The **AI Trading Agent System** is a sophisticated platform designed to simulate a professional investment team using a multi-agent collaborative framework. It leverages Large Language Models (LLMs) and the `reAct` paradigm to perform complex financial analysis and generate actionable trading insights.
 
-### Works done by LIU Rui
-- **Quantitative trading system development framework**: Learned about VeighNa, an open source Python-based framework for developing quantitative trading systems  <u>https://github.com/vnpy/vnpy</u>. Currently it provides a variety of modules, including a multi-functional quantitative trading platform (integrating a variety of trading interfaces and providing a simple and easy-to-use API for the development of specific strategy algorithms and functions), a CTP trading interface covering domestic futures and options trading in China, adapted to SQLite, and docked to the RQData (which is able to provide relevant data services for stocks, futures, options, funds, bonds, and gold TD). data service). Currently deployed on Windows and Ubantu systems (in progress).
-<img width="1120" alt="vnpy" src="https://github.com/user-attachments/assets/8d578090-4979-4f06-9bb5-1c7b5c9dd64f" />
+The system is built for real-world scenarios, supporting diverse markets including **Chinese A-shares, US stocks, and cryptocurrencies**. It automatically adapts to different market data structures, providing a unified and seamless analysis experience. This project serves as a powerful demonstration for academic research, investment education, and as a robust foundation for future intelligent trading platforms.
 
-### Works done by LIN Xingyan
+### Key Features
 
-- Looked into a financial LLM framework proposed by SUFE (arXiv:2503.16252v1), which finetunes on a financial reasoning dataset and applies reinforcement learning to improve interpretability and decision-making. Although it proposes a training-based approach, some voices argue that effective agent design relies more on leveraging contextual information rather than fine-tuning.
-- Followed a basic trading bot tutorial to get a general sense of how signal generation and agent execution flow are typically structured.
-- [Learned about a personally-built end-to-end trading platform](https://mpmt.notion.site/1e8cc64d809c80bb8d3de53ec6c9c8d6), with a focus on how the author integrated various published backtesting models into a functional and client-ready codebase.
-- Explored Coze’s access to Huatai-exclusive data to understand how to fetch structured research reports, analyze sectors, and incorporate this into agent-driven investment analysis, with workflows and analysis methods that can be adapted.
-![image](https://github.com/user-attachments/assets/32af371a-c942-4d66-9489-65d50b1d63d7)
+-   **Multi-Agent Architecture**: Employs 9+ specialized agents that collaborate in a structured workflow, mirroring a real-world investment team.
+-   **Cross-Market Compatibility**: Automatically handles data fetching, normalization, and analysis for stocks and crypto assets from different markets.
+-   **SuperAgent & ReAct Paradigm**: Utilizes a `SuperAgent` to orchestrate the workflow, enabling chain-of-thought reasoning and dynamic task execution for explainable AI.
+-   **Unified Data Pipeline**: Integrates multiple data sources like **Algogene API** and **yfinance**, with standardized data fields for consistent analysis.
+-   **End-to-End Workflow**: Covers the entire analysis pipeline from data collection, multi-faceted analysis (technical, fundamental, sentiment), risk assessment, to final decision-making.
+-   **Backtesting Engine**: Includes a `backtester.py` module to evaluate agent-driven strategies against historical data across all supported markets.
 
----
-## First Update 4/7
-
----
-### Framework Research
-
-#### Preliminary Testing
-
-* **openManus & OWL**: Initial evaluation to understand basic functions.
-* **High Token Usage**: Observed ~10K-30K tokens per interaction - significant cost.
-* **Finance Topic Limitations**: Noted restricted ability with specific financial queries.
-* **Gemini API Testing**: Using free tier - need to manage rate limits. openManus: rate limit control available. OWL: not provided.
-* **Playwright etc.**: Used for web info retrieval - to see data gathering methods.
-* **Operation & Module Design**: Gaining initial insights for our design.
-
-#### Framework Exploration
-
-* **MetaGPT**:
-    * **Software Company Simulation**: Model based on roles within a company.
-    * **Rapid Code & Doc Generation**: Quick output for strategy development.
-    * **Static Development**: Best for predefined tasks.
-* **AutoGen**:
-    * **Agent Collaboration**: Focus on agents working together.
-    * **Simple Web GUI**: Interface for easier interaction.
-    * **Real-time Data & Full Process**: Flexible for dynamic data and the whole system.
-
-* **Trading Agent Paper (Xiao et al., 2024)**: This paper's work focuses on improving information interaction methods and defining roles within MetaGPT. The authors claim the code will be open-source but it is not yet uploaded.
+<img width="1161" height="798" alt="image" src="https://github.com/user-attachments/assets/20d58b94-11cf-4b11-98b5-2d29d5587ce2" />
 
 
 ---
-### Data Source Scheme
-#### China Market
-**BigQuant**
-Price: ¥659/mo 
-Contains: high frequency data package (minute level)
 
-#### Hong Kong Market
-**Futu**
-Price: 318 hkd/mo
-Contains: minute level of real time and history data
+## 🏗System Architecture
 
+The system is designed with a modular, multi-layered architecture that ensures scalability and maintainability. The core components include the data layer, the agent layer, the orchestration layer, and the presentation layer (API & CLI).
+
+![System Architecture Diagram](https://github.com/user-attachments/assets/1b9637b8-0db2-454f-8515-c07235f09434)
+
+
+### Workflow
+
+The system's workflow is orchestrated by the **SuperAgent** using a graph-based approach (LangGraph). The process is as follows:
+
+1.  **Data Collection**: The `Market Data Agent` fetches and standardizes all necessary data (price, news, financials) for the given ticker.
+2.  **Parallel Analysis**: `Technical`, `Fundamental`, `Sentiment`, and `Macro News` agents perform their analysis concurrently.
+3.  **Debate & Synthesis**: `Bull` and `Bear Researcher Agents` synthesize the analyses and form opposing arguments, which are then debated in the `Debate Room Agent` to produce a balanced view.
+4.  **Risk & Portfolio Management**: The `Risk Management Agent` assesses the trade's risk profile, and the `Portfolio Management Agent` makes the final trading recommendation.
+5.  **Output**: The final, comprehensive analysis and recommendation are presented to the user.
+
+---
+
+## Multi-Agent Details
+
+The system's intelligence stems from the collaboration of specialized agents, each with a distinct role:
+
+-   **Market Data Agent**: Gathers and preprocesses all market data.
+-   **Technical Analyst Agent**: Performs technical analysis on price data (e.g., MACD, RSI).
+-   **Fundamentals Agent**: Analyzes financial metrics and statements.
+-   **Sentiment Agent**: Assesses market sentiment from news headlines.
+-   **Macro News Agent**: Analyzes macroeconomic news impacting the asset.
+-   **Researcher Agents (Bull/Bear)**: Formulate bullish and bearish cases.
+-   **Debate Room Agent**: Moderates the debate to form a consensus.
+-   **Risk Management Agent**: Evaluates and manages trade risk.
+-   **Portfolio Management Agent**: Makes the final investment decision.
+
+---
+
+## Tech Stack
+
+-   **Backend**: Python, FastAPI
+-   **AI & Orchestration**: LangChain, LangGraph, Google Gemini
+-   **Data Sources**: Algogene API, yfinance, akshare
+-   **Frontend**: React, TypeScript, Vite
+-   **Dependency Management**: Poetry
+-   **Database/Storage**: Local JSON files for caching and state
+
+---
+
+## Core Implementation Details
+
+-   **Automatic Market Dispatch**: The system uses a centralized dispatch logic in `src/tools/api.py`. Based on the ticker format (e.g., numeric for A-shares, alphabetic for US stocks/crypto), it automatically routes requests to the correct data source (yfinance, Algogene, etc.), ensuring seamless cross-market support.
+-   **Standardized Data Models**: All data, regardless of the source, is normalized into a standard Pydantic model. This allows agents to process information consistently without needing to know the market of origin.
+-   **Explainable AI (XAI)**: By enabling the `--show-reasoning` flag, users can trace the entire decision-making process, viewing the analysis, debates, and conclusions from each agent.
+
+---
+
+## Usage & Demo
+
+### Installation & Configuration
+
+1.  **Install Poetry**:
+    ```bash
+    curl -sSL https://install.python-poetry.org | python3 -
+    ```
+2.  **Install Dependencies**:
+    ```bash
+    poetry install
+    ```
+3.  **Configure Environment Variables**:
+    ```bash
+    cp .env.example .env
+    # Edit .env and add your API keys
+    # GEMINI_API_KEY=your-gemini-api-key
+    # ALGOGENE_API_KEY=your-algogene-api-key
+    ```
+
+### Command Line Mode
+
+Run comprehensive analysis directly from your terminal.
+
+```bash
+# Analyze a US stock
+poetry run python src/main.py --ticker TSLA
+
+# Analyze a cryptocurrency with detailed reasoning
+poetry run python src/main.py --ticker
 #### US Market
 **Futu**
 Price: 60 usd/mo
 Contains: minute level of real time and history data
+```
 
