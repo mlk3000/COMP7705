@@ -2,19 +2,24 @@
 layout: default
 title: COMP7705 - Agent AI in Stock Market Trading
 ---
-<a href="https://wp2024.cs.hku.hk/msp24113" style="position:absolute; top:10px; left:20px;">Homepage</a>
-<a href="/progress/" style="position:absolute; top:10px; right:80px;">Progress</a>
+
 
 
 # Agentic AI in Quantitative Trading (Traditional – Cryptocurrency)
 
 > An AI-powered trading analysis system based on a multi-agent architecture. This course project showcases a complete, end-to-end solution for automated financial market analysis, supporting Chinese stocks, US stocks, and major cryptocurrencies.
 
+<a href="https://wp2024.cs.hku.hk/msp24113" class="btn" >Homepage</a>
+
+<a href="/progress/" class="btn" >Progress</a>
+
 ---
 ## Team Overview
+
 **Group**: msp24113
 
 **Supervisor**: Dr. J.R. Zhang
+
 **Members**:
 - Yang Runzhuo – 3036382856
 - Lin Xingyan – 3036383020
