@@ -9,7 +9,7 @@ title: COMP7705 - Agent AI in Stock Market Trading
 
 > An AI-powered trading analysis system based on a multi-agent architecture. This course project showcases a complete, end-to-end solution for automated financial market analysis, supporting Chinese stocks, US stocks, and major cryptocurrencies.
 
-<a href="https://wp2024.cs.hku.hk/msp24113" class="btn" >Homepage</a> <a href="/progress/" class="btn" >Progress</a>
+<a href="https://wp2024.cs.hku.hk/msp24113" class="btn" >Homepage</a> <a href="{{ site.baseurl }}/progress/" class="btn" >Progress</a>
 
 ---
 ## Team Overview
@@ -41,18 +41,19 @@ title: COMP7705 - Agent AI in Stock Market Trading
 
 ## Project Overview & Background
 
-The **AI Trading Agent System** is a sophisticated platform designed to simulate a professional investment team using a multi-agent collaborative framework. It leverages Large Language Models (LLMs) and the `reAct` paradigm to perform complex financial analysis and generate actionable trading insights.
+The **AI Trading Agent System** is a sophisticated platform designed to simulate a professional investment team. At its core is a **SuperAgent**, an intelligent orchestrator that dynamically manages a team of specialized agents using the **ReAct (Reasoning and Acting)** paradigm. This allows the system to perform complex financial analysis and generate actionable trading insights with human-like adaptability.
 
 The system is built for real-world scenarios, supporting diverse markets including **Chinese A-shares, US stocks, and cryptocurrencies**. It automatically adapts to different market data structures, providing a unified and seamless analysis experience. This project serves as a powerful demonstration for academic research, investment education, and as a robust foundation for future intelligent trading platforms.
 
 ### Key Features
 
--   **Multi-Agent Architecture**: Employs 9+ specialized agents that collaborate in a structured workflow, mirroring a real-world investment team.
+-   **SuperAgent as the Core**: The system is driven by a central `SuperAgent` that intelligently orchestrates all other agents, making dynamic decisions based on the ReAct paradigm.
+-   **Specialized Multi-Agent Team**: Employs 9+ specialized agents that collaborate in a structured workflow, mirroring a real-world investment team.
 -   **Cross-Market Compatibility**: Automatically handles data fetching, normalization, and analysis for stocks and crypto assets from different markets.
--   **SuperAgent & ReAct Paradigm**: Utilizes a `SuperAgent` to orchestrate the workflow, enabling chain-of-thought reasoning and dynamic task execution for explainable AI.
 -   **Unified Data Pipeline**: Integrates multiple data sources like **Algogene API** and **yfinance**, with standardized data fields for consistent analysis.
 -   **End-to-End Workflow**: Covers the entire analysis pipeline from data collection, multi-faceted analysis (technical, fundamental, sentiment), risk assessment, to final decision-making.
 -   **Backtesting Engine**: Includes a `backtester.py` module to evaluate agent-driven strategies against historical data across all supported markets.
+
 
 <img width="1161" height="798" alt="image" src="https://github.com/user-attachments/assets/20d58b94-11cf-4b11-98b5-2d29d5587ce2" />
 
@@ -61,12 +62,27 @@ The system is built for real-world scenarios, supporting diverse markets includi
 
 ## 🏗System Architecture
 
-The system is designed with a modular, multi-layered architecture that ensures scalability and maintainability. The core components include the data layer, the agent layer, the orchestration layer, and the presentation layer (API & CLI).
+The system is designed with a modular, multi-layered architecture that ensures scalability and maintainability. The core components include the orchestration layer, the data layer, the agent layer and the presentation layer (API & CLI).
 
 ![System Architecture Diagram](https://github.com/user-attachments/assets/1b9637b8-0db2-454f-8515-c07235f09434)
 
+---
 
-### Workflow
+### Orchestration Layer: The SuperAgent
+
+Unlike a static, predefined workflow, our system's process is dynamically managed by the **SuperAgent**. This agent acts as the "brain" of the operation, using the **ReAct (Reasoning and Acting)** framework.
+
+**How it works:**
+
+1.  **Reasoning**: The `SuperAgent` first analyzes the current state of the analysis and the overall goal. It thinks step-by-step about what information is missing and which specialized agent is best suited to perform the next task.
+2.  **Acting**: Based on its reasoning, the `SuperAgent` selects and invokes the appropriate agent (e.g., `Technical Analyst`, `Fundamentals Agent`).
+3.  **Observation**: It then observes the output from the invoked agent, updates its understanding of the situation, and loops back to the reasoning step.
+
+This dynamic, intelligent orchestration makes the system highly adaptive and robust, capable of handling complex scenarios and unexpected data, much like a human team manager. This is all powered by **LangGraph**, which defines the states and transitions between agents.
+
+---
+
+### Langraph Workflow
 
 The system's workflow is orchestrated by the **SuperAgent** using a graph-based approach (LangGraph). The process is as follows:
 
