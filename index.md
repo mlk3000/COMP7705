@@ -2,7 +2,8 @@
 layout: default
 title: COMP7705 - Agent AI in Stock Market Trading
 ---
-
+<a href="https://wp2024.cs.hku.hk/msp24113" style="position:absolute; top:10px; left:20px;">Homepage</a>
+<a href="/progress/" style="position:absolute; top:10px; right:80px;">Progress</a>
 
 
 # Agentic AI in Quantitative Trading (Traditional – Cryptocurrency)
